@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Survey</title>
+    <link rel="stylesheet" type="text/css" href="css/stylesp3.css">
+  </head>
+  <body>
+     <div id="surveyContainer">
+      <form id="surveyForm">
+        <div>
+          <label for="userinfo">Enter your information:</label>
+          <input type="email" id="userinfo" name="userinfo" placeholder="E-mail" required>
+          <div>
+            <label for="categorySelect">Choose a category:</label>
+            <select id="categorySelect" name="category" required>
+              <option value="">Please choose an option</option>
+              <option value="category1">Straw Hats Figures</option>
+              <option value="category2">Wanted Posters</option>
+              <option value="category3">MUGiwara</option>
+            </select>
+          </div>
+          <div id="productOptions" style="display:none;">
+          </div>
+          <div>
+            <label for="impressions">Your impressions of the product:</label>
+            <textarea id="impressios" placeholder="Enter your impressions" required></textarea>
+          </div>
+           <button type="submit">Submit Survey</button>
+          </form>
+        </div>
+       <script>
+        document.getElementById('categorySelect').addEventListener('change', function() {
+            var selectedCategory = this.value;
+            var productOptionsDiv = document.getElementById('productOptions');
+            
+           
+            productOptionsDiv.innerHTML = '';
+            
+            if (selectedCategory) {
+              
+              var products = getProductsForCategory(selectedCategory);
+              
+              
+              products.forEach(function(product) {
+                var label = document.createElement('label');
+                label.textContent = product.name;
+                var checkbox = document.createElement('input');
+                checkbox.type = 'checkbox';
+                checkbox.name = 'products';
+                checkbox.value = product.id;
+                
+                label.appendChild(checkbox);
+                productOptionsDiv.appendChild(label);
+                productOptionsDiv.appendChild(document.createElement('br'));
+              });
+              
+              productOptionsDiv.style.display = 'block';
+            } else {
+              productOptionsDiv.style.display = 'none';
+            }
+          });
+          
+          
+          function getProductsForCategory(category) {
+            
+            var dProducts = [
+              { id: 'p1', name: 'Luffy' },
+              { id: 'p2', name: 'Zoro' },
+              { id: 'p3', name: 'Nami' },
+              { id: 'p4', name: 'Usopp' },
+              { id: 'p5', name: 'Sanji' },
+              { id: 'p6', name: 'Chopper' },
+              { id: 'p7', name: 'Robin' },
+              { id: 'p8', name: 'Franky' },
+              { id: 'p9', name: 'Brook' },
+              { id: 'p10', name: 'Jinbe' },
+            ];
+            return dProducts;
+          }
+          
+          document.getElementById('surveyForm').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+          
+          this.style.display='none';
+          alert('Thank you for completing the survey!');
+        });
+        </script>
+  </body>
+</html>

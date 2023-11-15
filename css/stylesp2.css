@@ -1,0 +1,134 @@
+body{
+    background-image: url('/Users/sarab/Desktop/proektna1/images/backg2.jfif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    color: white;
+    min-height: 100vh;
+    overflow-y: scroll;
+}
+
+h3
+{
+    font-family: Arial Black, sans-serif;
+   text-align:center;
+    background-color: #ff9900; 
+    color: black;
+   padding-left: 10px;
+   margin-top: -2px;
+}
+summary{
+    text-align: center;
+    display:block;
+    font-size: 18px;
+    background-color: red;
+    color: black;
+}
+.figure-image
+{
+   
+    width:300px;
+    height:auto;
+    margin-right:20px;
+    
+}
+.button-image {
+    width: 60px; 
+    height: auto;
+}
+.button-container-new
+{
+    display: block;
+    text-align: left;
+    margin-top:10px;
+    
+}
+.figure-container {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse; 
+  
+}
+.form-container {
+    max-width: 400px;
+    padding: 20px;
+    background-color:black;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input {
+    width:400px;
+    padding: 8px;
+    margin-bottom: 12px;
+}
+ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+   
+}
+
+li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo img, h2 {
+width:180px;
+height:150px;
+display:inline-block;
+}
+
+h2 
+{
+position:absolute;
+top:3px;
+white-space:nowrap;
+font-family: Garamond, serif;
+left: 35%; 
+text-shadow:-4px 4px 6px red;
+}
+.header-l
+{
+    position:absolute;
+    right: 310px;
+    top:50px;
+    white-space:nowrap;
+    display: inline;
+    
+}
+.header-l2
+{
+    display: inline;
+    margin-right: 15px;
+   
+}
+.button-container 
+{
+    display: inline-block;
+    width: 60px;   
+    height: auto;
+    
+    margin-right: 30px;
+}
+.button-link img
+{
+    
+    width:70px;
+    height:auto;
+
+}
+a
+{
+    text-decoration: none;
+    outline: none;
+    color: rgb(110, 106, 106);
+}
